@@ -8,12 +8,14 @@ export const Container = styled.div`
    flex-direction: row;
    justify-content: space-between;
    background-color: var(--header);
+   align-items: center;
+   padding: 0px 90px 0px 90px;
 `;
 export const LeftSide = styled.div`
   display: flex;
   flex-direction: row;
   height: 114px;
-  padding: 40px 0px 0px 40px;
+  align-items: center;
 
 `;
 
@@ -35,7 +37,7 @@ export const Welcome = styled.div`
 
 
 export const RightSide = styled.div`
-  padding: 40px 40px 0px 0px;;
+
 `;
 
 export const Button = styled.button``;

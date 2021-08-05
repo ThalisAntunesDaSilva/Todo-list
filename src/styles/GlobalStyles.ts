@@ -1,14 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 
-export default createGlobalStyle `
+export default createGlobalStyle`
 
   *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    color: var(--white);
+    color: var(--black);
   }
 
   html, border-style, #root {
@@ -42,7 +42,7 @@ export default createGlobalStyle `
     --secondary-light: #CAF3FF;
     --header: #F7F9FA;
     --error: #FF6D6D;
-    --grey-text: #FF6D6D;
+    --gray-text: #757575;
   }
 
 

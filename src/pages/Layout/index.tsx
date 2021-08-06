@@ -1,9 +1,9 @@
 import React from 'react';
 
 //import { Container } from './styles';
-import TopSide from '../TopSide';
-import MidSide from '../MidSide';
-import Botside from '../BotSide'
+import TopSide from '../../components/TopSide';
+import MidSide from '../../components/MidSide';
+import Botside from '../../components/BotSide'
 
 
 

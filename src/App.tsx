@@ -1,19 +1,42 @@
 import React from 'react';
 import GlobalStyles from './styles/GlobalStyles';
+import Header from './components/Header';
+import Layout from './pages/Layout';
+import NewTask from './pages/NewTask'
 
-import Header from './components/Header'
-import Layout from './components/Layout'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
-    <>
+   
+      <>
+    
+      <Header/>
+   
+      <Router>
+    
+    
+    
+        <Switch>
+          <Route path="/newtask">
+          <NewTask />
+          </Route>
 
-      <Header />
+<Route path ="/">
+          <Layout />
+          </Route>
 
-      <Layout /> 
+          </Switch>
+          </Router>
 
-      <GlobalStyles />
-    </>
+        <GlobalStyles />
+</>      
+  
   );
 }
 

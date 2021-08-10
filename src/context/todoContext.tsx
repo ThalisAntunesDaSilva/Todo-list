@@ -13,43 +13,29 @@ const TodoProvider: React.FC = ({ children }) => {
   
   
     const [todos, setTodos] = React.useState<ITodo[]>([
-    {
-      id: 1,
-      title: 'é os guri',
-      description: 'do gremio',
-      status: false,
-    },
-    {
+  {id: 1, title: 'Reunião com a Pedimos',description: 'Reunião sobre o desafio React',status: false,},
+  {
       id: 2,
-      title: 'post 2',
-      description: 'this is a description',
+      title: 'Reunião com o Dev Thalis',
+      description: 'Reunião importante',
       status: true,
-    },
+     
+       },
   ])
 
   
-
   const saveTodo = (todo: ITodo) => {
     const newTodo: ITodo = {
       id: Math.random(), 
       title: todo.title,
       description: todo.description,
       status: false,
-    }
+    };
     setTodos([...todos, newTodo])
   }
-
   
-/*
-  const updateTodo = (id: number) => {
-    todos.filter((todo: ITodo) => {
-      if (todo.id === id) {
-        todo.status = true
-        setTodos([...todos])
-      }
-    })
-  }
-*/
+
+
   return (
     <TodoContext.Provider value={{todos, saveTodo}}>
    {children} 

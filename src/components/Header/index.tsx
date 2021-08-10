@@ -1,8 +1,25 @@
-import React from 'react';
-
-import { Container, LeftSide, Avatar, Welcome, RightSide, Button, NotificationsIcon, DashboardIcon } from './styles';
+import * as React from 'react';
+import {
+    Container,
+    LeftSide,
+    Avatar,
+    Welcome,
+    RightSide,
+    Button,
+    DashboardIcon,
+    NotificationsIcon,
+    Bagde
+} from './styles';
+import BellPopUp from '../BellPopUp';
 
 const Header: React.FC = () => {
+
+  
+
+    const [openModal, setOpenModal] = React.useState(false);
+
+
+
     return (
         <Container>
             <LeftSide>
@@ -14,13 +31,16 @@ const Header: React.FC = () => {
             </LeftSide>
 
             <RightSide>
-                <Button>
 
+                <Button onClick={() => {setOpenModal(true)}}>
                     <NotificationsIcon />
+                    <Bagde>2</Bagde>
                 </Button>
 
-                <Button>
+             {openModal && <BellPopUp /> }
 
+
+                <Button>
                     <DashboardIcon />
                 </Button>
 

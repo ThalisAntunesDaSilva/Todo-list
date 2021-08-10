@@ -40,7 +40,16 @@ export const RightSide = styled.div`
 
 `;
 
-export const Button = styled.button``;
+
+export const Button = styled.button`
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+`; 
 
 const iconCSS = css`
 flex-shrink: 0;
@@ -48,6 +57,21 @@ flex-shrink: 0;
 width: 30px;
 height: 30px;
 color: black;
+`;
+
+export const Bagde = styled.span `
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 `;
 
 

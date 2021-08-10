@@ -32,4 +32,13 @@ export const ButtonNew = styled.button`
     height: 35px;
     width:118px;
     border-radius: 10px;
+    cursor: pointer;
+   
+    &:hover{
+        transition: 0.5s;
+        background-color: var(--primary-light);
+        color: black;
+        cursor: pointer;
+    }
+    
     `;

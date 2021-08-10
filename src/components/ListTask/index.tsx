@@ -1,12 +1,20 @@
-import React from 'react';
+import * as React from 'react';
 
 import ToggleSwitch from '../ToggleSwitch';
  import { Container, Type, DeleteIcon } from './styles';
+import {TodoContext} from '../../context/todoContext';
+
+
 
 const ListTask: React.FC = () => {
+    
+    const {todos} = React.useContext(TodoContext);
+
   return (
     <Container>  
-   <table>
+   
+   {todos.map((todo: ITodo) => (
+   <table key={todo.id}>
            
     <tr>
         <th>ID</th>
@@ -20,11 +28,12 @@ const ListTask: React.FC = () => {
    
     
     <tr>
+       
         <td><span>1</span></td>
         <td><div><ToggleSwitch/></div></td>
         <td><Type>Chamada</Type></td>
-        <td><span>Reunião com a Pedimos</span></td>
-        <td><span>Reunião para alinhamento de desafio de React...</span></td>
+        <td><span>{todo.title}</span></td>
+        <td><span>{todo.description}</span></td>
         <td><span>02 Ago 2021 15:30</span></td>
         <td><DeleteIcon /></td>
     </tr>
@@ -154,6 +163,7 @@ const ListTask: React.FC = () => {
    
    
 </table>
+))}
 </Container>
 
   );

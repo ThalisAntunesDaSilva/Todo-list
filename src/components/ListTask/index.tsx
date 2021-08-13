@@ -8,7 +8,12 @@ import {TodoContext} from '../../context/todoContext';
 
 const ListTask: React.FC = () => {
     
-    const {todos} = React.useContext(TodoContext);
+    const {todos, removeTodo} = React.useContext(TodoContext);
+
+    const handleDelete = (todo: ITodo) => {
+      removeTodo(todo);
+    }
+
 
   return (
     <Container>  
@@ -34,7 +39,7 @@ const ListTask: React.FC = () => {
         <td><span>{todo.title}</span></td>
         <td><span>{todo.description}</span></td>
         <td><span>{todo.date}</span></td>
-        <td><DeleteIcon /></td>
+        <td><DeleteIcon onClick={() => handleDelete(todo)}/></td>
     </tr>
 ) })}
    

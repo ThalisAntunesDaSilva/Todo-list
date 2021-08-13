@@ -10,8 +10,7 @@ interface ITodo {
     type ContextType = {
      todos: ITodo[]
      saveTodo: (todo: ITodo) => void
-     
-  
+     removeTodo: (todo: ITodo) => void
     
     }
 
